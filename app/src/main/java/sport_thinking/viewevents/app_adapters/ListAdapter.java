@@ -1,4 +1,4 @@
-package sport_thinking.viewevents.adapters;
+package sport_thinking.viewevents.app_adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

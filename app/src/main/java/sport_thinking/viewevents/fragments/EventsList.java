@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 
 import java.util.*;
 
-import sport_thinking.viewevents.adapters.ListAdapter;
 import sport_thinking.viewevents.R;
+import sport_thinking.viewevents.app_adapters.*;
 
 /**
  * A simple {@link Fragment} subclass.
