@@ -50,17 +50,21 @@ public class Home extends AppCompatActivity implements TempFragment.OnFragmentIn
         final TempFragment tempFragment = new TempFragment();
         AsyncHttpClient client = new AsyncHttpClient();
 
-        client.get(AppConfig.apiUrl+"/test.json", new JsonHttpResponseHandler() {
+        client.get(AppConfig.apiUrl, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 List<Product> products = new ArrayList<Product>();
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject product = response.getJSONObject(i);
-                        ArrayList <String> imageUrls = new ArrayList<>();
-                        String imageUrl = AppConfig.apiUrl+"uploads/"+product.getString("image");
-                        imageUrls.add(imageUrl);
-                        Product temp = new Product(product.getInt("id"),imageUrl,imageUrls,product.getDouble("price"),product.getString("name"),product.getString("description"));
+                        JSONArray imagesUrl = product.getJSONArray("image");
+                        String [] imageUrls = new String[imagesUrl.length()];
+                        for (int j = 0; j < imagesUrl.length(); j++) {
+                            String imageUrl = AppConfig.baseUrl+imagesUrl.getString(j);
+                            imageUrls[j] = imageUrl;
+                        }
+
+                        Product temp = new Product(product.getInt("id"),imageUrls[1],imageUrls,product.getDouble("price"),product.getString("name"),product.getString("description"));
                         products.add(i,temp);
                     } catch (JSONException e) {
                         e.printStackTrace();

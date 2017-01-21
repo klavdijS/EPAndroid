@@ -27,6 +27,7 @@ import java.util.*;
 import cz.msebera.android.httpclient.Header;
 import ep.cloud_store.R;
 import ep.cloud_store.app_adapters.*;
+import ep.cloud_store.config.AppConfig;
 import ep.cloud_store.objects.DataHolder;
 import ep.cloud_store.objects.Product;
 
@@ -109,17 +110,20 @@ public class TempFragment extends Fragment {
 
             public void refreshItems() throws InterruptedException {
                 AsyncHttpClient client = new AsyncHttpClient();
-                client.get(apiUrlPath+"/test.json", new JsonHttpResponseHandler() {
+                client.get(AppConfig.apiUrl, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                         List<Product> products = new ArrayList<Product>();
                         for (int i = 0; i < response.length(); i++) {
                             try {
                                 JSONObject product = response.getJSONObject(i);
-                                ArrayList <String> imageUrls = new ArrayList<>();
-                                String imageUrl = apiUrlPath+"uploads/"+product.getString("image");
-                                imageUrls.add(imageUrl);
-                                Product temp = new Product(product.getInt("id"),imageUrl,imageUrls,product.getDouble("price"),product.getString("name"),product.getString("description"));
+                                JSONArray imagesUrl = product.getJSONArray("image");
+                                String [] imageUrls = new String[imagesUrl.length()];
+                                for (int j = 0; j < imagesUrl.length(); j++) {
+                                    String imageUrl = AppConfig.baseUrl+imagesUrl.getString(j);
+                                    imageUrls[j] = imageUrl;
+                                }
+                                Product temp = new Product(product.getInt("id"),imageUrls[0],imageUrls,product.getDouble("price"),product.getString("name"),product.getString("description"));
                                 products.add(i,temp);
                             } catch (JSONException e) {
                                 e.printStackTrace();

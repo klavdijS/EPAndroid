@@ -11,14 +11,14 @@ public class Product implements Serializable {
 
     private int id;
     private String mainImage;
-    private ArrayList<String> images;
+    private String [] images;
     private double price;
     private String title;
     private String description;
 
     //constructor
 
-    public Product(int id, String mainImage, ArrayList<String> images, double price, String title, String description) {
+    public Product(int id, String mainImage, String [] images, double price, String title, String description) {
         this.id = id;
         this.mainImage = mainImage;
         this.images = images;
@@ -35,7 +35,7 @@ public class Product implements Serializable {
         return mainImage;
     }
 
-    public ArrayList<String> getImages() {
+    public String [] getImages() {
         return images;
     }
 
@@ -59,7 +59,7 @@ public class Product implements Serializable {
         this.mainImage = mainImage;
     }
 
-    public void setImages(ArrayList<String> images) {
+    public void setImages(String [] images) {
         this.images = images;
     }
 

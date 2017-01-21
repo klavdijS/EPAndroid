@@ -3,6 +3,7 @@ package ep.cloud_store.app_adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     public void onBindViewHolder(final MyViewHolder myViewHolder, final int i) {
 
         final Product product = products.get(i);
+        Log.d("Product image url",product.getMainImage());
         Glide.with(myViewHolder.mView.getContext()).load(product.getMainImage()).centerCrop().into(myViewHolder.productImage);
         myViewHolder.productTitle.setText(product.getTitle());
         String priceString = Double.toString(product.getPrice())+" $";

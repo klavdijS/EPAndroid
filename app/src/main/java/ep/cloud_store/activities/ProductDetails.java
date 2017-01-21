@@ -44,7 +44,7 @@ public class ProductDetails extends AppCompatActivity {
 
 
         carouselView = (CarouselView) findViewById(R.id.carouselView);
-        carouselView.setPageCount(product.getImages().size());
+        carouselView.setPageCount(product.getImages().length);
         carouselView.setImageListener(imageListener);
 
         description = (TextView) findViewById(R.id.description);
@@ -55,8 +55,6 @@ public class ProductDetails extends AppCompatActivity {
         productTitle.setText(product.getTitle());
         String priceNum = Double.toString(product.getPrice())+ " $";
         price.setText(priceNum);
-
-        System.out.println(product.getImages());
 
         CirclePageIndicator indicator = (CirclePageIndicator) carouselView.findViewById(R.id.indicator);
 
@@ -69,7 +67,7 @@ public class ProductDetails extends AppCompatActivity {
     ImageListener imageListener = new ImageListener() {
         @Override
         public void setImageForPosition(int position, ImageView imageView) {
-            Glide.with(getApplicationContext()).load(product.getImages().get(position)).centerCrop().into(imageView);
+            Glide.with(getApplicationContext()).load(product.getImages()[position]).centerCrop().into(imageView);
         }
     };
 

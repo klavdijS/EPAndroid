@@ -6,11 +6,13 @@ package ep.cloud_store.config;
 
 public class AppConfig {
 
-    public static String apiUrl = "http://192.168.0.11:8888/";
+    public static String baseUrl = "http://192.168.1.103:8888/";
 
-    public static String loginUrl = "http://192.168.0.11:8888/api/login";
+    public static String apiUrl = "http://192.168.1.103:8888/api/products";
 
-    public static String registrationUrl = "http://192.168.0.11:8888/api/register";
+    public static String loginUrl = "http://192.168.1.103:8888/api/login";
 
-    public static String changeUserSettings = "http://192.168.0.11:8888/api/changeuser";
+    public static String registrationUrl = "http://192.168.1.103:8888/api/register";
+
+    public static String changeUserSettings = "http://192.168.1.103:8888/api/changeuser";
 }
