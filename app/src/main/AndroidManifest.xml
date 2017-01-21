@@ -15,8 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="ep.cloud_store.activities.Home"
-            android:launchMode="singleTask"/>
+        <activity android:name="ep.cloud_store.activities.Home"/>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="1e63df93017cef37b9f850a5fd6e63604a2c1b1f" />
