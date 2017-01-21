@@ -1,2 +1,2 @@
-# sport-thinking-app
-Sportradar app.
+# CloudStore Android client
+Android client for CloudStore. Projekt pri predmetu Elektronsko poslovanje
