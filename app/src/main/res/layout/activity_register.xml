@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <EditText
+                android:id="@+id/username_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+
+
+            <EditText
+                android:id="@+id/email_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:id="@+id/password_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+
+            <!-- Login Button -->
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/name"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/name"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp"
+                    android:textCursorDrawable="@null" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/surname"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/last_name"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/street"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/street_address"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:layout_marginRight="5dp"
+                    android:textCursorDrawable="@null" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/street_number"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/street_number"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/city"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/city"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:layout_marginRight="5dp"
+                    android:textCursorDrawable="@null" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="10"
+                    android:id="@+id/postcode"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/postcode"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/country"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/country"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:layout_marginRight="5dp"
+                    android:textCursorDrawable="@null" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/phoneNumber"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/phone_number"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:textColor="#222222"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/cardview_light_background"
+                android:text="@string/register"
+                android:textColor="@color/colorPrimary" />
+
+            <!-- Link to Login Screen -->
+
+            <Button
+                android:id="@+id/btnLinkToLoginScreen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@null"
+                android:text="@string/already_have_an_account_sign_in_here"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btnLinkToShopScreen_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@null"
+                android:text="@string/check_shop"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

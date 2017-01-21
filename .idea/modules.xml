@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ViewEvents.iml" filepath="$PROJECT_DIR$/ViewEvents.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sport-thinking-app.iml" filepath="$PROJECT_DIR$/sport-thinking-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-store-ep.iml" filepath="$PROJECT_DIR$/cloud-store-ep.iml" />
     </modules>
   </component>
 </project>

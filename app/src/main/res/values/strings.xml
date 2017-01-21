@@ -1,5 +1,37 @@
 <resources>
-    <string name="app_name">ViewEvents</string>
+    <string name="app_name">CloudStore</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="country">Country</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last name</string>
+    <string name="street_address">Street address</string>
+    <string name="street_number">Street number</string>
+    <string name="city">City</string>
+    <string name="postcode">Postcode</string>
+    <string name="phone_number">Phone number</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_sign_in_here">Already have an account? Sign in here!</string>
+    <string name="check_shop">Just want to check out the shop?</string>
+    <string name="not_registered">Not registered yet? Register!</string>
+    <string name="sign_in">Sign in</string>
+    <string name="new_password">New password</string>
+    <string name="save_changes">Save changes</string>
+    <string name="app_tittle">CloudStore</string>
 </resources>

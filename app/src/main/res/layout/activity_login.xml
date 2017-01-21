@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:text="@string/app_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="48dp"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textColorHint="#999999"
+            android:textColorLink="?android:attr/colorActivatedHighlight"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@null" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textColorHint="#999999"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@null" />
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/cardview_light_background"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorPrimary" />
+
+        <!-- Link to Login Screen -->
+
+        <Button
+            android:id="@+id/btnLinkToRegisterScreen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:background="@null"
+            android:text="@string/not_registered"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnLinkToShopScreen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:text="@string/check_shop"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

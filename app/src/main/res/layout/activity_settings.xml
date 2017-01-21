@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ep.cloud_store.activities.SettingsActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/cardBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/settings_toolbar"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="#FFFFFF"
+        android:elevation="3dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/settings_toolbar"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/username_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textColorHint="#999999"
+            android:textCursorDrawable="@null"
+            android:layout_marginTop="10dp"
+            android:bufferType="editable"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+
+        <EditText
+            android:id="@+id/email_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textColorHint="#999999"
+            android:textCursorDrawable="@null" />
+
+        <EditText
+            android:id="@+id/current_password_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textColorHint="#999999"
+            android:textCursorDrawable="@null" />
+
+        <!-- Login Button -->
+
+        <EditText
+            android:id="@+id/new_password_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent"
+            android:hint="@string/new_password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textColorHint="#999999"
+            android:textCursorDrawable="@null" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/name_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/name"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:padding="10dp"
+                android:layout_marginRight="5dp"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/surname_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/last_name"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/street_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/street_address"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:layout_marginRight="5dp"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/street_number_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/street_number"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/city_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/city"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:layout_marginRight="5dp"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:ems="10"
+                android:id="@+id/postcode_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/postcode"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/country_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/country"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:layout_marginRight="5dp"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/phoneNumber_settings"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:hint="@string/phone_number"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textColor="#222222"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/cardview_light_background"
+            android:text="@string/save_changes"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+</RelativeLayout>

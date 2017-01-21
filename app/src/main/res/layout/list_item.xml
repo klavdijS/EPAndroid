@@ -1,42 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    android:id="@+id/cardlist_item"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:orientation="vertical"
-    card_view:cardCornerRadius="5dp"
-    card_view:cardElevation="5dp">
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:background="#e6e6e6"
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="?attr/listPreferredItemHeight"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingBottom="8dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="8dp">
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="0dp">
 
-        <TextView
-            android:id="@+id/listitem_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/abc_text_size_subhead_material" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Force Crash!"
-            android:onClick="forceCrash"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitXY"
+                card_view:srcCompat="@mipmap/ic_launcher"
+                android:adjustViewBounds="false"
+                android:clickable="false" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thumbnail"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="Klavdijevi piškoti" />
 
-</android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="12sp"
+                android:text="26,99 $" />
 
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
